@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Application - Nasser Scouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- ROUTE PROTECTION BLOCKER SCRIPT - MUST RUN FIRST -->
+    <!-- Secure Application Router Blocker -->
+<!-- <script>
+    (function() {
+        let executionAttempts = 0;
+        const enforceShieldRoute = setInterval(() => {
+            executionAttempts++;
+            
+            // Check if Firebase auth wrapper is ready
+            if (window.firebaseAuthInstance) {
+                clearInterval(enforceShieldRoute);
+                
+                // Track state directly from the initialized state
+                window.firebaseAuthInstance.onAuthStateChanged((user) => {
+                    if (!user) {
+                        renderAccessBlocker();
+                    }
+                });
+            }
+            
+            // Fail-safe protection if network drops
+            if (executionAttempts > 100) {
+                clearInterval(enforceShieldRoute);
+                if (!window.currentAuthUser) renderAccessBlocker();
+            }
+        }, 50);
+
+        function renderAccessBlocker() {
+            if (document.getElementById('auth-protection-overlay')) return;
+            
+            const overlay = document.createElement('div');
+            overlay.id = 'auth-protection-overlay';
+            overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(6,14,40,0.98); display:flex; align-items:center; justify-content:center; z-index:10000; flex-direction:column; gap:20px;';
+
+            const messageBox = document.createElement('div');
+            messageBox.style.cssText = 'text-align:center; color:white; background:rgba(255,255,255,0.05); padding:40px; border-radius:16px; border:1px solid rgba(255,255,255,0.1); max-width:450px; font-family:sans-serif;';
+            messageBox.innerHTML = `
+                <h2 style="margin:0 0 15px 0; font-size:24px; color:#7eb8f7;">🔐 Sign In Required</h2>
+                <p style="margin:0 0 15px 0; font-size:15px; color:rgba(255,255,255,0.8); line-height:1.6;">You must be logged into a Nasser Scouts account to submit forms.</p>
+                <p style="margin:0; font-size:13px; color:rgba(230,240,255,0.4);">Redirecting you to the entry portal...</p>
+            `;
+
+            overlay.appendChild(messageBox);
+            document.body.insertBefore(overlay, document.body.firstChild);
+            document.body.style.overflow = 'hidden';
+
+            const formContainer = document.querySelector('.application-page');
+            if (formContainer) formContainer.style.display = 'none';
+
+            setTimeout(() => {
+                window.location.href = '../login.html';
+            }, 1800);
+        }
+    })();
+</script> -->
+
+    <a href="../index.html" class="back">← Back</a>
+    <div class="application-page">
+        <div class="application-banner">
+            <img src="../assets/images/app.jpeg" alt="Member registration banner">
+        </div>
+
+        <section class="application-header">
+            <h1>Apply to Join</h1>
+            <p>Complete the member registration form and attach your supporting documents to submit your application.</p>
+        </section>
+
+        <div class="application-card">
+            <form id="member-application-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="full-name">Full Name</label>
+                        <input id="full-name" type="text" placeholder="Enter your full name" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="id-number">National ID</label>
+                        <input id="id-number" type="text" placeholder="Enter national ID" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telephone">Telephone</label>
+                        <input id="telephone" type="tel" placeholder="Enter phone number" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input id="email" type="email" placeholder="Enter email address" class="input" required>
+                    </div>
+                </div>
+
+                <div class="form-grid birth-row">
+                    <div class="input-group">
+                        <label for="birth-year">Birth Year</label>
+                        <input id="birth-year" type="number" placeholder="Year" min="1900" max="2026" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="birth-month">Birth Month</label>
+                        <input id="birth-month" type="number" placeholder="Month" min="1" max="12" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="birth-day">Birth Day</label>
+                        <input id="birth-day" type="number" placeholder="Day" min="1" max="31" class="input" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="scouting-stage">Calculated Scouting Stage</label>
+                    <input id="scouting-stage" type="text" placeholder="Stage will auto-evaluate" class="input" readonly>
+                </div>
+
+                <div class="file-row">
+                    <div class="file-group">
+                        <label for="upload-personal-photo">Personal Photo</label>
+                        <div class="file-drop-area" id="personal-photo-dropzone">
+                            <span class="file-prompt">Drag & drop a photo or browse</span>
+                            <div class="file-status hidden">
+                                <span class="file-status-text"></span>
+                                <button type="button" class="file-clear-button" aria-label="Clear selected personal photo">×</button>
+                            </div>
+                            <input id="upload-personal-photo" type="file" accept="image/*" required>
+                        </div>
+                    </div>
+                    <div class="file-group">
+                        <label for="upload-id-cert">ID / Document</label>
+                        <div class="file-drop-area" id="id-cert-dropzone">
+                            <span class="file-prompt">Upload ID card or certificate</span>
+                            <div class="file-status hidden">
+                                <span class="file-status-text"></span>
+                                <button type="button" class="file-clear-button" aria-label="Clear selected document">×</button>
+                            </div>
+                            <input id="upload-id-cert" type="file" accept="image/*,application/pdf" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="member-terms" required>
+                    <label for="member-terms">I agree that I have read the Safe from Harm policies and group bylaws.</label>
+                </div>
+
+                <button type="submit" class="register">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const birthYearInput = document.querySelector('#birth-year');
+        const scoutingStageInput = document.querySelector('#scouting-stage');
+
+        function computeScoutingStage() {
+            const year = parseInt(birthYearInput.value, 10);
+            if (!year || year < 1900) {
+                scoutingStageInput.value = '';
+                return;
+            }
+            const currentYear = 2026;
+            const age = currentYear - year;
+            let stage = '';
+            
+            if (age >= 3 && age < 7) {
+                stage = 'Joey / البراعم';
+            } else if (age >= 7 && age < 11) {
+                stage = 'Cubs & Brownies / الأشبال والزهرات';
+            } else if (age >= 11 && age < 15) {
+                stage = 'Scouts & Guides / الكشافة والمرشدات';
+            } else if (age >= 15 && age < 18) {
+                stage = 'Ventures / المتقدم';
+            } else if (age >= 18 && age <= 22) {
+                stage = 'Rovers / الجوالة والدليلات';
+            } else {
+                stage = 'Age outside scout brackets';
+            }
+            scoutingStageInput.value = stage;
+        }
+        birthYearInput.addEventListener('input', computeScoutingStage);
+    </script>
+    <script>
+        function initFileDropzone(inputId, dropzoneId) {
+            const input = document.getElementById(inputId);
+            const dropzone = document.getElementById(dropzoneId);
+            if (!input || !dropzone) return;
+
+            const prompt = dropzone.querySelector('.file-prompt');
+            const status = dropzone.querySelector('.file-status');
+            const statusText = dropzone.querySelector('.file-status-text');
+            const clearButton = dropzone.querySelector('.file-clear-button');
+
+            function updateDropzone(file) {
+                if (file) {
+                    dropzone.classList.add('file-ready');
+                    prompt.classList.add('hidden');
+                    status.classList.remove('hidden');
+                    statusText.textContent = `✓ ${file.name} Ready`;
+                } else {
+                    dropzone.classList.remove('file-ready');
+                    prompt.classList.remove('hidden');
+                    status.classList.add('hidden');
+                    statusText.textContent = '';
+                    input.value = '';
+                }
+            }
+
+            clearButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                updateDropzone(null);
+            });
+
+            input.addEventListener('change', () => {
+                updateDropzone(input.files[0]);
+            });
+
+            ['dragenter', 'dragover'].forEach((eventName) => {
+                dropzone.addEventListener(eventName, (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    dropzone.classList.add('file-over');
+                });
+            });
+
+            ['dragleave', 'drop', 'dragend'].forEach((eventName) => {
+                dropzone.addEventListener(eventName, (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    dropzone.classList.remove('file-over');
+                });
+            });
+
+            dropzone.addEventListener('drop', (event) => {
+                const droppedFiles = event.dataTransfer?.files;
+                if (!droppedFiles || !droppedFiles.length) return;
+                const dt = new DataTransfer();
+                dt.items.add(droppedFiles[0]);
+                input.files = dt.files;
+                updateDropzone(droppedFiles[0]);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initFileDropzone('upload-personal-photo', 'personal-photo-dropzone');
+            initFileDropzone('upload-id-cert', 'id-cert-dropzone');
+        });
+    </script>
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

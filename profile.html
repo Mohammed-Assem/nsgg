@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Dashboard</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="header">
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/images/logo.svg" alt="Nasser Scouts Logo" class="logoimage">
+      <div class="logo-text">
+        <span class="logo-name">Nasser Scouts</span>
+        <span class="logo-sub">Qalyubia</span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="achi.html">Achievements</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><button id="lang-toggle" class="lang-btn">English</button></li>
+      </ul>
+      <a href="signin.html" class="btn-signin">Sign In/Up</a>
+    </div>
+  </nav>
+
+  <main class="profile-dashboard" id="profile-dashboard">
+    <section class="profile-header">
+      <div class="profile-card profile-summary-card">
+        <div class="profile-avatar">
+          <img id="profile-display-img" src="" alt="Personal Photo">
+        </div>
+        <div class="profile-copy">
+          <p class="profile-label">Scout Member</p>
+          <h1 id="profile-name">Loading name...</h1>
+          <p class="profile-detail"><span>National ID:</span> <span id="profile-nationalid">--</span></p>
+          <p class="profile-detail"><span>Phone:</span> <span id="profile-phone">--</span></p>
+          <p class="profile-stage"><strong>Scouting Stage:</strong> <span id="profile-stage">--</span></p>
+        </div>
+      </div>
+      <div class="profile-card profile-stats-card">
+        <div class="stat-block">
+          <span class="stat-label">Outstanding Fines</span>
+          <strong class="stat-value" id="fine-total">0 EGP</strong>
+        </div>
+        <div class="stat-block secondary">
+          <span class="stat-label">Achievements</span>
+          <strong class="stat-value" id="achievement-count">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-panel achievements-panel">
+      <div class="panel-heading">
+        <h2>Achievements</h2>
+        <p>Track earned badges, awards and scout challenges.</p>
+      </div>
+      <div id="achievements-container" class="achievements-grid"></div>
+    </section>
+
+    <section class="dashboard-panel fines-panel">
+      <div class="panel-heading">
+        <h2>Outstanding Fines</h2>
+        <p>Recent fine history and amount due.</p>
+      </div>
+      <div id="fines-list" class="fines-list"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

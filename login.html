@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <nav class="header">
+        <a href="index.html" class="logo-wrap">
+            <img src="assets/images/logo.svg" alt="Nasser Scouts Logo" class="logoimage">
+            <div class="logo-text">
+                <span class="logo-name">Nasser Scouts</span>
+                <span class="logo-sub">Qalyubia</span>
+            </div>
+        </a>
+        <div class="nav-right">
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="achi.html">Achievements</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
+            </ul>    
+        </div>
+    </nav>
+    <section class="page hero">
+        <!-- login.html Form Update -->
+<div class="card">
+    <h2 class="card-title">Welcome Back</h2>
+    
+    <form id="login-form">
+        <div class="field">
+            <input id="login-email" type="email" placeholder="Email Address" class="input" required>
+        </div>
+        
+        <div class="field">
+            <input id="login-password" type="password" placeholder="Password" class="input" required>
+        </div>
+        
+        <div class="field">
+            <label class="remember"><input type="checkbox" id="remember">Remember me</label>
+        </div>
+        
+        <button type="submit" class="register" id="login-btn"> Login </button>
+        
+        <div id="login-error" class="error-feedback" aria-live="polite" style="color: #ff6b6b; margin-top: 10px; font-size: 14px; text-align: center;"></div>
+    </form>
+    
+    <p class="login"> Don't have an account? <a href="signin.html">Create Account</a></p>
+</div>
+    </section>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

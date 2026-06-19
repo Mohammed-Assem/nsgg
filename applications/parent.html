@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Application - Nasser Scouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- ROUTE PROTECTION BLOCKER SCRIPT - MUST RUN FIRST -->
+    <!-- Secure Application Router Blocker -->
+<!-- <script>
+    (function() {
+        let executionAttempts = 0;
+        const enforceShieldRoute = setInterval(() => {
+            executionAttempts++;
+            
+            // Check if Firebase auth wrapper is ready
+            if (window.firebaseAuthInstance) {
+                clearInterval(enforceShieldRoute);
+                
+                // Track state directly from the initialized state
+                window.firebaseAuthInstance.onAuthStateChanged((user) => {
+                    if (!user) {
+                        renderAccessBlocker();
+                    }
+                });
+            }
+            
+            // Fail-safe protection if network drops
+            if (executionAttempts > 100) {
+                clearInterval(enforceShieldRoute);
+                if (!window.currentAuthUser) renderAccessBlocker();
+            }
+        }, 50);
+
+        function renderAccessBlocker() {
+            if (document.getElementById('auth-protection-overlay')) return;
+            
+            const overlay = document.createElement('div');
+            overlay.id = 'auth-protection-overlay';
+            overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(6,14,40,0.98); display:flex; align-items:center; justify-content:center; z-index:10000; flex-direction:column; gap:20px;';
+
+            const messageBox = document.createElement('div');
+            messageBox.style.cssText = 'text-align:center; color:white; background:rgba(255,255,255,0.05); padding:40px; border-radius:16px; border:1px solid rgba(255,255,255,0.1); max-width:450px; font-family:sans-serif;';
+            messageBox.innerHTML = `
+                <h2 style="margin:0 0 15px 0; font-size:24px; color:#7eb8f7;">🔐 Sign In Required</h2>
+                <p style="margin:0 0 15px 0; font-size:15px; color:rgba(255,255,255,0.8); line-height:1.6;">You must be logged into a Nasser Scouts account to submit forms.</p>
+                <p style="margin:0; font-size:13px; color:rgba(230,240,255,0.4);">Redirecting you to the entry portal...</p>
+            `;
+
+            overlay.appendChild(messageBox);
+            document.body.insertBefore(overlay, document.body.firstChild);
+            document.body.style.overflow = 'hidden';
+
+            const formContainer = document.querySelector('.application-page');
+            if (formContainer) formContainer.style.display = 'none';
+
+            setTimeout(() => {
+                window.location.href = '../login.html';
+            }, 1800);
+        }
+    })();
+</script> -->
+
+    <a href="../index.html" class="back">← Back</a>
+    <div class="application-page">
+        <div class="application-banner">
+            <img src="../assets/images/app.jpeg" alt="Parent application banner">
+        </div>
+
+        <section class="application-header">
+            <h1>Parent Registration</h1>
+            <p>Tell us about your family and how many children are joining Nasser Scouts.</p>
+        </section>
+
+        <div class="application-card">
+            <form id="parent-application-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="parent-name">Parent Full Name</label>
+                        <input id="parent-name" type="text" placeholder="Enter parent full name" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="parent-id">National ID</label>
+                        <input id="parent-id" type="text" placeholder="Enter national ID" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="parent-phone">Telephone Number</label>
+                        <input id="parent-phone" type="tel" placeholder="Enter telephone number" class="input" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="parent-email">Email Address</label>
+                        <input id="parent-email" type="email" placeholder="Enter email address" class="input" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="children-count">How Many Children</label>
+                    <input id="children-count" type="number" placeholder="How many children want to join?" min="1" max="10" class="input" required>
+                </div>
+
+                <div class="children-names-container" id="children-names-container"></div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="parent-terms" required>
+                    <label for="parent-terms">I agree that I have read the Safe from Harm policies and group bylaws.</label>
+                </div>
+
+                <button type="submit" class="register">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const countInput = document.querySelector('#children-count');
+        const container = document.querySelector('#children-names-container');
+
+        countInput.addEventListener('input', () => {
+            container.innerHTML = '';
+            const count = parseInt(countInput.value, 10);
+            if (!count || count < 1) return;
+            
+            for(let i = 1; i <= count; i++) {
+                const div = document.createElement('div');
+                div.className = 'field';
+                div.style.marginBottom = '10px';
+                div.innerHTML = `<input type="text" placeholder="Child #${i} Full Name" class="input child-name-field" required>`;
+                container.appendChild(div);
+            }
+        });
+    </script>
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

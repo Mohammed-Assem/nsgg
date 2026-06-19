@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="header">
+        <a href="index.html" class="logo-wrap">
+            <img src="assets/images/logo.svg" alt="Nasser Scouts Logo" class="logoimage">
+            <div class="logo-text">
+                <span class="logo-name">Nasser Scouts</span>
+                <span class="logo-sub">Qalyubia</span>
+            </div>
+        </a>
+        <div class="nav-right">
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="achi.html" class="active">Achievements</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
+            </ul>
+            <a href="signin.html" class="btn-signin">Sign In/Up</a>
+        </div>
+    </nav>
+
+    <main class="achievements-section" style="padding: 60px 20px; background: linear-gradient(135deg, var(--header-bg) 0%, rgba(25, 40, 65, 0.8) 100%);">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h1 style="text-align: center; font-size: 36px; margin-bottom: 15px; color: white; font-family: 'Merriweather', serif;">Scout Achievements</h1>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-bottom: 50px; font-size: 16px;">Milestones and recognitions earned by our scout members</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                
+                <!-- Achievement 1: Scout Badge -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🏅</div>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Scout Badge</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">Recognition for completing foundational skills</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 January 15, 2026</p>
+                    <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                        <div style="background: var(--accent); height: 100%; width: 100%; animation: slideInRight 0.8s ease-out;"></div>
+                    </div>
+                </div>
+
+                <!-- Achievement 2: Leadership Award -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">⭐</div>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Leadership Award</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">Demonstrated exceptional leadership qualities</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 February 20, 2026</p>
+                    <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                        <div style="background: var(--accent); height: 100%; width: 85%; animation: slideInRight 0.8s ease-out 0.1s both;"></div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3: Community Service -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🤝</div>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Community Service</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">50+ hours of community volunteer work</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 March 10, 2026</p>
+                    <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                        <div style="background: var(--accent); height: 100%; width: 75%; animation: slideInRight 0.8s ease-out 0.2s both;"></div>
+                    </div>
+                </div>
+
+                <!-- Achievement 4: Academic Excellence -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">📚</div>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Academic Excellence</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">Achieved outstanding academic performance</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 April 5, 2026</p>
+                    <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                        <div style="background: var(--accent); height: 100%; width: 90%; animation: slideInRight 0.8s ease-out 0.3s both;"></div>
+                    </div>
+                </div>
+
+                <!-- Achievement 5: Sports Champion -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">🏆</div>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Sports Champion</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">First place in regional scout competitions</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 May 18, 2026</p>
+                    <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                        <div style="background: var(--accent); height: 100%; width: 95%; animation: slideInRight 0.8s ease-out 0.4s both;"></div>
+                    </div>
+                </div>
+
+                <!-- Achievement 6: Lifetime Member -->
+                <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 40px; margin-bottom: 15px;">👑</div>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Lifetime Member</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">5+ years of dedicated scout participation</p>
+                    <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 June 1, 2026</p>
+                    <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                        <div style="background: var(--accent); height: 100%; width: 100%; animation: slideInRight 0.8s ease-out 0.5s both;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <style>
+        @keyframes slideInRight {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+        .achievements-section > div > div > div > div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(168, 208, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            main.achievements-section {
+                padding: 40px 15px;
+            }
+
+            main.achievements-section h1 {
+                font-size: 28px !important;
+            }
+        }
+    </style>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

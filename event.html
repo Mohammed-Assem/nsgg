@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="header">
+        <a href="index.html" class="logo-wrap">
+            <img src="assets/images/logo.svg" alt="Nasser Scouts Logo" class="logoimage">
+            <div class="logo-text">
+                <span class="logo-name">Nasser Scouts</span>
+                <span class="logo-sub">Qalyubia</span>
+            </div>
+        </a>
+        <div class="nav-right">
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="achi.html">Achievements</a></li>
+                <li><a href="event.html" class="active">Events</a></li>
+                <li><button id="lang-toggle" class="lang-btn">English</button></li>
+            </ul>
+            <a href="signin.html" class="btn-signin">Sign In/Up</a>
+        </div>
+    </nav>
+
+    <main class="events-dashboard" style="padding: 60px 20px; background: linear-gradient(135deg, var(--header-bg) 0%, rgba(25, 40, 65, 0.8) 100%);">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h1 style="text-align: center; font-size: 36px; margin-bottom: 15px; color: white; font-family: 'Merriweather', serif;">Scout Events</h1>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-bottom: 50px; font-size: 16px;">Join us for exciting activities and community engagement</p>
+
+            <!-- Upcoming Events Section -->
+            <section style="margin-bottom: 60px;">
+                <h2 style="font-size: 24px; color: white; margin-bottom: 30px; padding-bottom: 12px; border-bottom: 2px solid var(--accent);">📅 Upcoming Events</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    
+                    <!-- Event Card 1 -->
+                    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent) 0%, rgba(168, 208, 255, 0.3) 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🏕️</div>
+                        <div style="padding: 20px;">
+                            <div style="display: inline-block; background: var(--accent); color: var(--accent-text); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 12px;">July 15-17, 2026</div>
+                            <h3 style="color: white; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Summer Camp Adventure</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Three-day outdoor camping expedition with survival skills training and team-building activities.</p>
+                            <button class="register" style="width: 100%; padding: 10px; background: var(--accent); color: var(--accent-text); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: opacity 0.3s;">Register Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 2 -->
+                    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent) 0%, rgba(168, 208, 255, 0.3) 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🎯</div>
+                        <div style="padding: 20px;">
+                            <div style="display: inline-block; background: var(--accent); color: var(--accent-text); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 12px;">August 5, 2026</div>
+                            <h3 style="color: white; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Regional Scout Competition</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Compete in archery, orienteering, and tactical challenges against scouts from neighboring regions.</p>
+                            <button class="register" style="width: 100%; padding: 10px; background: var(--accent); color: var(--accent-text); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: opacity 0.3s;">Register Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 3 -->
+                    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, var(--accent) 0%, rgba(168, 208, 255, 0.3) 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🤝</div>
+                        <div style="padding: 20px;">
+                            <div style="display: inline-block; background: var(--accent); color: var(--accent-text); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 12px;">August 20, 2026</div>
+                            <h3 style="color: white; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Community Service Day</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Join us for a community cleanup and youth mentorship program in local neighborhoods.</p>
+                            <button class="register" style="width: 100%; padding: 10px; background: var(--accent); color: var(--accent-text); border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: opacity 0.3s;">Register Now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Past Activities Section -->
+            <section>
+                <h2 style="font-size: 24px; color: white; margin-bottom: 30px; padding-bottom: 12px; border-bottom: 2px solid rgba(255, 255, 255, 0.2);">📸 Past Activities</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    
+                    <!-- Past Activity Card 1 -->
+                    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); opacity: 0.85;">
+                        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(100, 150, 200, 0.2) 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🏅</div>
+                        <div style="padding: 20px;">
+                            <div style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 12px;">June 10, 2026</div>
+                            <h3 style="color: white; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Annual Gala Ceremony</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Celebrated our members' achievements and welcomed new scouts to our organization.</p>
+                            <button style="width: 100%; padding: 10px; background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; font-weight: 600; cursor: default;">Past Event</button>
+                        </div>
+                    </div>
+
+                    <!-- Past Activity Card 2 -->
+                    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); opacity: 0.85;">
+                        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(100, 150, 200, 0.2) 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🌍</div>
+                        <div style="padding: 20px;">
+                            <div style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 12px;">May 22, 2026</div>
+                            <h3 style="color: white; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Environmental Cleanup</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Organized a successful environmental awareness campaign with local park restoration efforts.</p>
+                            <button style="width: 100%; padding: 10px; background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; font-weight: 600; cursor: default;">Past Event</button>
+                        </div>
+                    </div>
+
+                    <!-- Past Activity Card 3 -->
+                    <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); opacity: 0.85;">
+                        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(100, 150, 200, 0.2) 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🎓</div>
+                        <div style="padding: 20px;">
+                            <div style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 12px;">April 18, 2026</div>
+                            <h3 style="color: white; font-size: 18px; margin-bottom: 10px; font-weight: 600;">Leadership Workshop</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Intensive training session on leadership skills and decision-making for senior scouts.</p>
+                            <button style="width: 100%; padding: 10px; background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; font-weight: 600; cursor: default;">Past Event</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        .events-dashboard > div > section > div > div:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(168, 208, 255, 0.15);
+        }
+
+        .register:hover {
+            opacity: 0.9 !important;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            main.events-dashboard {
+                padding: 40px 15px;
+            }
+
+            main.events-dashboard h1 {
+                font-size: 28px !important;
+            }
+
+            section h2 {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
