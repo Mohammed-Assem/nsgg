@@ -3,99 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leader Application - Nasser Scouts</title>
+    <title data-i18n="leader-title-tag">Leader Application - Nasser Scouts</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon">
 </head>
 <body>
-    <!-- ROUTE PROTECTION BLOCKER SCRIPT - MUST RUN FIRST -->
-    <!-- Secure Application Router Blocker -->
-<!-- <script>
-    (function() {
-        let executionAttempts = 0;
-        const enforceShieldRoute = setInterval(() => {
-            executionAttempts++;
-            
-            // Check if Firebase auth wrapper is ready
-            if (window.firebaseAuthInstance) {
-                clearInterval(enforceShieldRoute);
-                
-                // Track state directly from the initialized state
-                window.firebaseAuthInstance.onAuthStateChanged((user) => {
-                    if (!user) {
-                        renderAccessBlocker();
-                    }
-                });
-            }
-            
-            // Fail-safe protection if network drops
-            if (executionAttempts > 100) {
-                clearInterval(enforceShieldRoute);
-                if (!window.currentAuthUser) renderAccessBlocker();
-            }
-        }, 50);
-
-        function renderAccessBlocker() {
-            if (document.getElementById('auth-protection-overlay')) return;
-            
-            const overlay = document.createElement('div');
-            overlay.id = 'auth-protection-overlay';
-            overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(6,14,40,0.98); display:flex; align-items:center; justify-content:center; z-index:10000; flex-direction:column; gap:20px;';
-
-            const messageBox = document.createElement('div');
-            messageBox.style.cssText = 'text-align:center; color:white; background:rgba(255,255,255,0.05); padding:40px; border-radius:16px; border:1px solid rgba(255,255,255,0.1); max-width:450px; font-family:sans-serif;';
-            messageBox.innerHTML = `
-                <h2 style="margin:0 0 15px 0; font-size:24px; color:#7eb8f7;">🔐 Sign In Required</h2>
-                <p style="margin:0 0 15px 0; font-size:15px; color:rgba(255,255,255,0.8); line-height:1.6;">You must be logged into a Nasser Scouts account to submit forms.</p>
-                <p style="margin:0; font-size:13px; color:rgba(230,240,255,0.4);">Redirecting you to the entry portal...</p>
-            `;
-
-            overlay.appendChild(messageBox);
-            document.body.insertBefore(overlay, document.body.firstChild);
-            document.body.style.overflow = 'hidden';
-
-            const formContainer = document.querySelector('.application-page');
-            if (formContainer) formContainer.style.display = 'none';
-
-            setTimeout(() => {
-                window.location.href = '../login.html';
-            }, 1800);
-        }
-    })();
-</script> -->
-    <a href="../index.html" class="back">←</a>
+    <a href="../index.html" class="back" data-i18n="leader-back">← Back</a>
     <div class="application-page">
         <div class="application-banner">
             <img src="../assets/images/app.jpeg" alt="Leader registration banner">
         </div>
 
         <section class="application-header">
-            <h1>Leader Registration</h1>
-            <p>Apply to serve as a Scout Leader. Submit your details and verification files below.</p>
+            <h1 data-i18n="leader-page-title">Leader Registration</h1>
+            <p data-i18n="leader-page-desc">Apply to serve as a Scout Leader. Submit your details and verification files below.</p>
         </section>
 
         <div class="application-card">
             <form id="leader-application-form">
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="full-name">Full Name</label>
-                        <input id="full-name" type="text" placeholder="Enter your full name" class="input" required>
+                        <label for="full-name" data-i18n="leader-fullname-label">Full Name</label>
+                        <input id="full-name" type="text" class="input" required data-i18n-placeholder="leader-fullname-placeholder" placeholder="Enter your full name">
                     </div>
                     <div class="input-group">
-                        <label for="id-number">National ID</label>
-                        <input id="id-number" type="text" placeholder="Enter National ID" class="input" required>
+                        <label for="id-number" data-i18n="leader-nationalid-label">National ID</label>
+                        <input id="id-number" type="text" class="input" required data-i18n-placeholder="leader-nationalid-placeholder" placeholder="Enter National ID">
                     </div>
                     <div class="input-group">
-                        <label for="telephone">Telephone Number</label>
-                        <input id="telephone" type="tel" placeholder="Enter telephone number" class="input" required>
+                        <label for="telephone" data-i18n="leader-phone-label">Telephone Number</label>
+                        <input id="telephone" type="tel" class="input" required data-i18n-placeholder="leader-phone-placeholder" placeholder="Enter telephone number">
                     </div>
                     <div class="input-group">
-                        <label for="email">Email Address</label>
-                        <input id="email" type="email" placeholder="Enter email address" class="input" required>
+                        <label for="email" data-i18n="leader-email-label">Email Address</label>
+                        <input id="email" type="email" class="input" required data-i18n-placeholder="leader-email-placeholder" placeholder="Enter email address">
                     </div>
                 </div>
 
-                <label style="display:block; margin-top:15px; color:var(--text-secondary);">Date of Birth</label>
+                <label style="display:block; margin-top:15px; color:var(--text-secondary);" data-i18n="leader-dob-label">Date of Birth</label>
                 <div class="birth-row" style="display: flex; gap: 10px; margin-bottom: 15px;">
                     <input id="birth-day" type="number" placeholder="Day" min="1" max="31" class="input" required>
                     <input id="birth-month" type="number" placeholder="Month" min="1" max="12" class="input" required>
@@ -104,7 +51,7 @@
 
                 <div class="file-row" style="margin-top:20px; display:grid; gap:15px;">
                     <div class="file-drop-area" id="personal-photo-dropzone">
-                        <span class="file-prompt">📷 Drag & drop a photo or browse</span>
+                        <span class="file-prompt" data-i18n="leader-photo-prompt">📷 Drag & drop a photo or browse</span>
                         <div class="file-status hidden">
                             <span class="file-status-text"></span>
                             <button type="button" class="file-clear-button" aria-label="Clear selected personal photo">×</button>
@@ -112,7 +59,7 @@
                         <input id="upload-personal-photo" type="file" accept="image/*" required>
                     </div>
                     <div class="file-drop-area" id="id-cert-dropzone">
-                        <span class="file-prompt">📄 Drag & drop an ID card copy or browse</span>
+                        <span class="file-prompt" data-i18n="leader-doc-prompt">📄 Drag & drop an ID card copy or browse</span>
                         <div class="file-status hidden">
                             <span class="file-status-text"></span>
                             <button type="button" class="file-clear-button" aria-label="Clear selected document">×</button>
@@ -121,7 +68,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="register" style="margin-top:25px;">Submit Application</button>
+                <button type="submit" class="register" style="margin-top:25px;" data-i18n="leader-submit">Submit Application</button>
             </form>
         </div>
     </div>
@@ -191,6 +138,41 @@
             initFileDropzone('upload-id-cert', 'id-cert-dropzone');
         });
     </script>
-    <script type="module" src="../app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../lang.js"></script>
+    <script src="../app.js"></script>
+    <script>
+    (function() {
+        var attempts = 0;
+        var guard = setInterval(function() {
+            attempts++;
+            if (window.firebaseAuthInstance) {
+                clearInterval(guard);
+                window.firebaseAuthInstance.onAuthStateChanged(function(user) {
+                    if (!user) renderBlock();
+                });
+            }
+            if (attempts > 200) {
+                clearInterval(guard);
+                if (!window.currentAuthUser) renderBlock();
+            }
+        }, 50);
+
+        function renderBlock() {
+            if (document.getElementById('auth-protection-overlay')) return;
+            var o = document.createElement('div');
+            o.id = 'auth-protection-overlay';
+            o.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(6,14,40,0.98);display:flex;align-items:center;justify-content:center;z-index:10000;flex-direction:column;gap:20px;';
+            o.innerHTML = '<div style="text-align:center;color:white;background:rgba(255,255,255,0.05);padding:40px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);max-width:450px;font-family:sans-serif;"><h2 style="margin:0 0 15px;font-size:24px;color:#7eb8f7;">Sign In Required</h2><p style="margin:0 0 15px;font-size:15px;color:rgba(255,255,255,0.8);line-height:1.6;">You must be logged into a Nasser Scouts account to submit forms.</p><p style="margin:0;font-size:13px;color:rgba(230,240,255,0.4);">Redirecting you to the entry portal...</p></div>';
+            document.body.insertBefore(o, document.body.firstChild);
+            document.body.style.overflow = 'hidden';
+            var c = document.querySelector('.application-page');
+            if (c) c.style.display = 'none';
+            setTimeout(function() { window.location.href = '../login.html'; }, 1800);
+        }
+    })();
+    </script>
 </body>
 </html>

@@ -23,27 +23,27 @@
         </a>
         <div class="nav-right">
             <ul class="navlinks">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="achi.html">Achievements</a></li>
-                <li><a href="event.html">Events</a></li>
+                <li><a href="index.html" class="active" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" data-i18n="nav-about">About Us</a></li>
+                <li><a href="achi.html" data-i18n="nav-achievements">Achievements</a></li>
+                <li><a href="event.html" data-i18n="nav-events">Events</a></li>
                 <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
-            <a href="signin.html" class="btn-signin">Sign In/Up</a>
+            <a href="signin.html" class="btn-signin" id="signin-btn" data-i18n="nav-signin-btn">Sign In/Up</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
             
-            <p class="hero-eyebrow">Scout Castle · Qalyubia</p>
-            <h1 class="abb">Welcome to Nasser Scouts and Guides Groups </h1>
-            <p class="hero-sub">Building tomorrow's leaders through adventure, teamwork, and service to the community.</p>
-            <a href="#join" class="btn-hero">Join Us</a>
+            <p class="hero-eyebrow" data-i18n="hero-eyebrow">Scout Castle · Qalyubia</p>
+            <h1 class="abb" data-i18n="hero-title">Welcome to Nasser Scouts and Guides Groups</h1>
+            <p class="hero-sub" data-i18n="hero-sub">Building tomorrow's leaders through adventure, teamwork, and service to the community.</p>
+            <a href="#join" class="btn-hero" data-i18n="hero-join">Join Us</a>
         </div>
         <div class="hero-badge">
-            <strong>Proudly serving</strong>
-            Hundreds of scouts across Qalyubia Governorate, Egypt.
+            <strong data-i18n="hero-badge-title">Proudly serving</strong>
+            <span data-i18n="hero-badge-text">Hundreds of scouts across Qalyubia Governorate, Egypt.</span>
         </div>
     </section>
     <section class="about-sec" id="about">
@@ -52,7 +52,7 @@
             <div class="about-left">
                 
                 <div class="about-img-wrap">
-                    <img src="assets/images/abt.jpg" alt="About Nasser Scouts" class="about-img">
+                    <img src="assets/images/abt.jpg" alt="About Nasser Scouts" class="about-img" data-i18n-attr="alt" data-i18n="about-img-alt">
                 </div>
                 <div class="about-socials">
                     <a href="#" class="social-icon"><img src="assets/images/tiktok.png" alt="TikTok"></a>
@@ -62,12 +62,12 @@
             </div>
 
             <div class="about-right">
-                <h2 class="about-title">ABOUT US</h2>
+                <h2 class="about-title" data-i18n="about-title">ABOUT US</h2>
                 <div class="about-text-wrap">
-                    <p class="about-para">
+                    <p class="about-para" data-i18n="about-p1">
                         Nasser Scouts Groups started as a community initiative in downtown Qalyubia, aiming to help youth discover their potential through real-world adventures, civic leadership, and collaborative teamwork. It soon became obvious that our mission could expand beyond typical outdoor survival to truly nurture foundational leadership skills from the very get-go.
                     </p>
-                    <p class="about-para">
+                    <p class="about-para" data-i18n="about-p2">
                         Currently, we offer scout training, community development projects, and outdoor exploration frameworks in order to build character, resilience, and a lasting spirit of service. We value our core scout laws above everything else, meaning that we never stop short of guiding individuals to give their absolute best effort.
                     </p>
                 </div>
@@ -79,47 +79,47 @@
     <hr>
 
     <section class="join" id="join">
-        <h2 class="about-title join-title">Join Us</h2>
+        <h2 class="about-title join-title" data-i18n="join-title">Join Us</h2>
         <div class="classes">
             <div class="join-card">
-                <img src="assets/images/scout.jpeg" alt="Member" class="class-img">
+                <img src="assets/images/scout.jpeg" data-i18n-attr="alt" data-i18n="join-member-img-alt" alt="Member" class="class-img">
                 <div class="card-drawer">
-                    <span class="drawer-label">
+                    <span class="drawer-label" data-i18n="join-member-label">
                         I'm a Scout Member
                     </span>
                     <div class="drawer-content">
-                        <p class="drawer-text">Join as a scout member and embark on real adventures, build life skills, and become part of a community that lasts a lifetime.</p>
-                        <a href="applications/member.html" class="btn-apply">Apply Now</a>
+                        <p class="drawer-text" data-i18n="join-member-desc">Join as a scout member and embark on real adventures, build life skills, and become part of a community that lasts a lifetime.</p>
+                        <a href="applications/member.html" class="btn-apply" data-i18n="join-member-btn">Apply Now</a>
                     </div>
                 </div>
             </div>
 
             <div class="join-card">
-                <img src="assets/images/leader.png" alt="Leader" class="class-img">
+                <img src="assets/images/leader.png" data-i18n-attr="alt" data-i18n="join-leader-img-alt" alt="Leader" class="class-img">
                 <div class="card-drawer">
-                    <span class="drawer-label">
+                    <span class="drawer-label" data-i18n="join-leader-label">
                         I'm a scout leader
                     </span>
                     <div class="drawer-content">
-                        <p class="drawer-text">
+                        <p class="drawer-text" data-i18n="join-leader-desc">
                             Step into a leadership role and help shape the next generation of scouts through mentorship, training, and community service.
                         </p>
-                        <a href="applications/leader.html" class="btn-apply">Apply Now</a>
+                        <a href="applications/leader.html" class="btn-apply" data-i18n="join-leader-btn">Apply Now</a>
                     </div>
                 </div>   
             </div>
 
             <div class="join-card">
-                <img src="assets/images/parent.jpg" alt="Parent" class="class-img">
+                <img src="assets/images/parent.jpg" data-i18n-attr="alt" data-i18n="join-parent-img-alt" alt="Parent" class="class-img">
                 <div class="card-drawer">
-                    <span class="drawer-label">
+                    <span class="drawer-label" data-i18n="join-parent-label">
                         I'm a Parent
                     </span>
                     <div class="drawer-content">
-                        <p class="drawer-text">
+                        <p class="drawer-text" data-i18n="join-parent-desc">
                             Support your child's growth by enrolling them in Nasser Scouts. Stay involved, stay informed, and watch them thrive.
                         </p>
-                        <a href="applications/parent.html" class="btn-apply">Apply Now</a>
+                        <a href="applications/parent.html" class="btn-apply" data-i18n="join-parent-btn">Apply Now</a>
                     </div>
 
                 </div>
@@ -129,45 +129,49 @@
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-map">
-                <h3 class="footer-heading"> Site Map</h3>
+                <h3 class="footer-heading" data-i18n="footer-sitemap">Site Map</h3>
                 <div class="map-grid">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#join">Join Us</a></li>
-                        <li><a href="achi.html">Achievements</a></li>
-                        <li><a href="event.html">Events</a></li>
+                        <li><a href="#" data-i18n="footer-home">Home</a></li>
+                        <li><a href="#about" data-i18n="footer-about">About Us</a></li>
+                        <li><a href="#join" data-i18n="footer-join">Join Us</a></li>
+                        <li><a href="achi.html" data-i18n="footer-achievements">Achievements</a></li>
+                        <li><a href="event.html" data-i18n="footer-events">Events</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-contact">
-                <h3 class="footer-heading">Contact Us</h3>
+                <h3 class="footer-heading" data-i18n="footer-contact">Contact Us</h3>
                 <ul class="footer-links">
-                    <li><a href="#"><img src="assets/images/tiktok.png" alt="tiktok">TikTok</a></li>
-                    <li><a href="#"><img src="assets/images/insta.png" alt="instagran">Instagram</a></li>
-                    <li><a href="#"><img src="assets/images/image.png" alt="facebook">Facebook</a></li>
+                    <li><a href="#"><img src="assets/images/tiktok.png" alt="tiktok"><span data-i18n="footer-tiktok">TikTok</span></a></li>
+                    <li><a href="#"><img src="assets/images/insta.png" alt="instagran"><span data-i18n="footer-instagram">Instagram</span></a></li>
+                    <li><a href="#"><img src="assets/images/image.png" alt="facebook"><span data-i18n="footer-facebook">Facebook</span></a></li>
                     <li><a href="mailto:info@nasserscouts.org"><span>📬</span>info@nasserscouts.org</a></li>
                     <li><a href="tel:+201023863853"><span>📞</span>+20 1023863853</a></li>
                 </ul>
             </div>
             <div class="footer-about">
-                <h3 class="footer-heading">About Us</h3>
+                <h3 class="footer-heading" data-i18n="footer-about-title">About Us</h3>
                 <div class="footer-brand">
                     <img src="assets/images/logo.svg" alt="Nasser Scouts Logo" class="footer-logo">
                     <div>
-                        <p class="footer-brand-name">Nasser Scouts Groups</p>
-                        <p class="footer-brand-desc">A community-driven scout organization based in Qalyubia, Egypt, dedicated to building tomorrow's leaders through adventure, teamwork, and service.</p>
-                        <p class="footer-location"><span>📍</span> Scout Castle, Qalyubia Governorate, Egypt</p>
+                        <p class="footer-brand-name" data-i18n="footer-brand-name">Nasser Scouts Groups</p>
+                        <p class="footer-brand-desc" data-i18n="footer-brand-desc">A community-driven scout organization based in Qalyubia, Egypt, dedicated to building tomorrow's leaders through adventure, teamwork, and service.</p>
+                        <p class="footer-location"><span>📍</span> <span data-i18n="footer-location">Scout Castle, Qalyubia Governorate, Egypt</span></p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p class="footer-copy">Copyright © 2026 Nasser Scouts Groups. All Rights Reserved.</p>
-            <p class="footer-credit">Qalyubia Governorate, Egypt</p>
+            <p class="footer-copy" data-i18n="footer-copyright">Copyright &copy; 2026 Nasser Scouts Groups. All Rights Reserved.</p>
+            <p class="footer-credit" data-i18n="footer-credit">Qalyubia Governorate, Egypt</p>
         </div>
     </footer>
-    <script type="module" src="./app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="lang.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

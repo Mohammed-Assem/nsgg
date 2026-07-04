@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements</title>
+    <title data-i18n="achi-title-tag">Achievements - Nasser Scouts</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,28 +23,28 @@
         </a>
         <div class="nav-right">
             <ul class="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">About Us</a></li>
-                <li><a href="achi.html" class="active">Achievements</a></li>
-                <li><a href="event.html">Events</a></li>
+                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="index.html" data-i18n="nav-about">About Us</a></li>
+                <li><a href="achi.html" class="active" data-i18n="nav-achievements">Achievements</a></li>
+                <li><a href="event.html" data-i18n="nav-events">Events</a></li>
                 <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>
-            <a href="signin.html" class="btn-signin">Sign In/Up</a>
+            <a href="signin.html" class="btn-signin" id="signin-btn" data-i18n="nav-signin-btn">Sign In/Up</a>
         </div>
     </nav>
 
     <main class="achievements-section" style="padding: 60px 20px; background: linear-gradient(135deg, var(--header-bg) 0%, rgba(25, 40, 65, 0.8) 100%);">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h1 style="text-align: center; font-size: 36px; margin-bottom: 15px; color: white; font-family: 'Merriweather', serif;">Scout Achievements</h1>
-            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-bottom: 50px; font-size: 16px;">Milestones and recognitions earned by our scout members</p>
+            <h1 style="text-align: center; font-size: 36px; margin-bottom: 15px; color: white; font-family: 'Merriweather', serif;" data-i18n="achi-page-title">Scout Achievements</h1>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-bottom: 50px; font-size: 16px;" data-i18n="achi-page-desc">Milestones and recognitions earned by our scout members</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
                 
                 <!-- Achievement 1: Scout Badge -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
                     <div style="font-size: 40px; margin-bottom: 15px;">🏅</div>
-                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Scout Badge</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">Recognition for completing foundational skills</p>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;" data-i18n="achi-card1-title">Scout Badge</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;" data-i18n="achi-card1-desc">Recognition for completing foundational skills</p>
                     <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 January 15, 2026</p>
                     <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
                         <div style="background: var(--accent); height: 100%; width: 100%; animation: slideInRight 0.8s ease-out;"></div>
@@ -54,8 +54,8 @@
                 <!-- Achievement 2: Leadership Award -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
                     <div style="font-size: 40px; margin-bottom: 15px;">⭐</div>
-                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Leadership Award</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">Demonstrated exceptional leadership qualities</p>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;" data-i18n="achi-card2-title">Leadership Award</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;" data-i18n="achi-card2-desc">Demonstrated exceptional leadership qualities</p>
                     <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 February 20, 2026</p>
                     <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
                         <div style="background: var(--accent); height: 100%; width: 85%; animation: slideInRight 0.8s ease-out 0.1s both;"></div>
@@ -65,8 +65,8 @@
                 <!-- Achievement 3: Community Service -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
                     <div style="font-size: 40px; margin-bottom: 15px;">🤝</div>
-                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Community Service</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">50+ hours of community volunteer work</p>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;" data-i18n="achi-card3-title">Community Service</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;" data-i18n="achi-card3-desc">50+ hours of community volunteer work</p>
                     <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 March 10, 2026</p>
                     <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
                         <div style="background: var(--accent); height: 100%; width: 75%; animation: slideInRight 0.8s ease-out 0.2s both;"></div>
@@ -76,8 +76,8 @@
                 <!-- Achievement 4: Academic Excellence -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
                     <div style="font-size: 40px; margin-bottom: 15px;">📚</div>
-                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Academic Excellence</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">Achieved outstanding academic performance</p>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;" data-i18n="achi-card4-title">Academic Excellence</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;" data-i18n="achi-card4-desc">Achieved outstanding academic performance</p>
                     <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 April 5, 2026</p>
                     <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
                         <div style="background: var(--accent); height: 100%; width: 90%; animation: slideInRight 0.8s ease-out 0.3s both;"></div>
@@ -87,8 +87,8 @@
                 <!-- Achievement 5: Sports Champion -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
                     <div style="font-size: 40px; margin-bottom: 15px;">🏆</div>
-                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Sports Champion</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">First place in regional scout competitions</p>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;" data-i18n="achi-card5-title">Sports Champion</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;" data-i18n="achi-card5-desc">First place in regional scout competitions</p>
                     <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 May 18, 2026</p>
                     <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
                         <div style="background: var(--accent); height: 100%; width: 95%; animation: slideInRight 0.8s ease-out 0.4s both;"></div>
@@ -98,8 +98,8 @@
                 <!-- Achievement 6: Lifetime Member -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 25px; backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s;">
                     <div style="font-size: 40px; margin-bottom: 15px;">👑</div>
-                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;">Lifetime Member</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;">5+ years of dedicated scout participation</p>
+                    <h3 style="color: white; font-size: 18px; margin-bottom: 8px;" data-i18n="achi-card6-title">Lifetime Member</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 12px;" data-i18n="achi-card6-desc">5+ years of dedicated scout participation</p>
                     <p style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 12px;">📅 June 1, 2026</p>
                     <div style="background: rgba(255, 255, 255, 0.1); height: 6px; border-radius: 3px; overflow: hidden;">
                         <div style="background: var(--accent); height: 100%; width: 100%; animation: slideInRight 0.8s ease-out 0.5s both;"></div>
@@ -138,6 +138,10 @@
         }
     </style>
 
-    <script type="module" src="./app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="lang.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Dashboard</title>
+  <title data-i18n="profile-title-tag">Profile Dashboard - Nasser Scouts</title>
   <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +21,12 @@
     </a>
     <div class="nav-right">
       <ul class="navlinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="achi.html">Achievements</a></li>
-        <li><a href="event.html">Events</a></li>
+        <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+        <li><a href="achi.html" data-i18n="nav-achievements">Achievements</a></li>
+        <li><a href="event.html" data-i18n="nav-events">Events</a></li>
         <li><button id="lang-toggle" class="lang-btn">English</button></li>
       </ul>
-      <a href="signin.html" class="btn-signin">Sign In/Up</a>
+      <a href="signin.html" class="btn-signin" id="signin-btn" data-i18n="nav-signin-btn">Sign In/Up</a>
     </div>
   </nav>
 
@@ -34,23 +34,23 @@
     <section class="profile-header">
       <div class="profile-card profile-summary-card">
         <div class="profile-avatar">
-          <img id="profile-display-img" src="" alt="Personal Photo">
+          <img id="profile-display-img" src="" data-i18n-attr="alt" data-i18n="profile-avatar-alt" alt="Personal Photo">
         </div>
         <div class="profile-copy">
-          <p class="profile-label">Scout Member</p>
-          <h1 id="profile-name">Loading name...</h1>
-          <p class="profile-detail"><span>National ID:</span> <span id="profile-nationalid">--</span></p>
-          <p class="profile-detail"><span>Phone:</span> <span id="profile-phone">--</span></p>
-          <p class="profile-stage"><strong>Scouting Stage:</strong> <span id="profile-stage">--</span></p>
+          <p class="profile-label" data-i18n="profile-label">Scout Member</p>
+          <h1 id="profile-name" data-i18n="profile-name-loading">Loading name...</h1>
+          <p class="profile-detail"><span data-i18n="profile-nationalid-label">National ID:</span> <span id="profile-nationalid">--</span></p>
+          <p class="profile-detail"><span data-i18n="profile-phone-label">Phone:</span> <span id="profile-phone">--</span></p>
+          <p class="profile-stage"><strong data-i18n="profile-stage-label">Scouting Stage:</strong> <span id="profile-stage">--</span></p>
         </div>
       </div>
       <div class="profile-card profile-stats-card">
         <div class="stat-block">
-          <span class="stat-label">Outstanding Fines</span>
+          <span class="stat-label" data-i18n="profile-fines-label">Outstanding Fines</span>
           <strong class="stat-value" id="fine-total">0 EGP</strong>
         </div>
         <div class="stat-block secondary">
-          <span class="stat-label">Achievements</span>
+          <span class="stat-label" data-i18n="profile-achievements-label">Achievements</span>
           <strong class="stat-value" id="achievement-count">0</strong>
         </div>
       </div>
@@ -58,21 +58,26 @@
 
     <section class="dashboard-panel achievements-panel">
       <div class="panel-heading">
-        <h2>Achievements</h2>
-        <p>Track earned badges, awards and scout challenges.</p>
+        <h2 data-i18n="profile-achievements-section-title">Achievements</h2>
+        <p data-i18n="profile-achievements-section-desc">Track earned badges, awards and scout challenges.</p>
       </div>
       <div id="achievements-container" class="achievements-grid"></div>
     </section>
 
     <section class="dashboard-panel fines-panel">
       <div class="panel-heading">
-        <h2>Outstanding Fines</h2>
-        <p>Recent fine history and amount due.</p>
+        <h2 data-i18n="profile-fines-section-title">Outstanding Fines</h2>
+        <p data-i18n="profile-fines-section-desc">Recent fine history and amount due.</p>
       </div>
       <div id="fines-list" class="fines-list"></div>
     </section>
   </main>
 
-  <script type="module" src="./app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="lang.js"></script>
+  <script src="./app.js"></script>
+  <script>if (typeof setupProfilePage === 'function') setupProfilePage();</script>
 </body>
 </html>

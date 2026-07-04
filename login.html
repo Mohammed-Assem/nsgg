@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title data-i18n="login-title-tag">Login - Nasser Scouts</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
 </head>
 <body>
     <nav class="header">
@@ -22,10 +22,10 @@
         </a>
         <div class="nav-right">
             <ul class="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">About Us</a></li>
-                <li><a href="achi.html">Achievements</a></li>
-                <li><a href="event.html">Events</a></li>
+                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="index.html" data-i18n="nav-about">About Us</a></li>
+                <li><a href="achi.html" data-i18n="nav-achievements">Achievements</a></li>
+                <li><a href="event.html" data-i18n="nav-events">Events</a></li>
                 <li><button id="lang-toggle" class="lang-btn">English</button></li>
             </ul>    
         </div>
@@ -33,29 +33,34 @@
     <section class="page hero">
         <!-- login.html Form Update -->
 <div class="card">
-    <h2 class="card-title">Welcome Back</h2>
+    <h2 class="card-title" data-i18n="login-title">Welcome Back</h2>
     
     <form id="login-form">
         <div class="field">
-            <input id="login-email" type="email" placeholder="Email Address" class="input" required>
+            <input id="login-email" type="email" class="input" required data-i18n-placeholder="login-email-placeholder" placeholder="Email Address">
         </div>
         
         <div class="field">
-            <input id="login-password" type="password" placeholder="Password" class="input" required>
+            <input id="login-password" type="password" class="input" required data-i18n-placeholder="login-password-placeholder" placeholder="Password">
         </div>
         
         <div class="field">
-            <label class="remember"><input type="checkbox" id="remember">Remember me</label>
+            <label class="remember"><input type="checkbox" id="remember"> <span data-i18n="login-remember">Remember me</span></label>
         </div>
         
-        <button type="submit" class="register" id="login-btn"> Login </button>
+        <button type="submit" class="register" id="login-btn" data-i18n="login-btn">Login</button>
         
         <div id="login-error" class="error-feedback" aria-live="polite" style="color: #ff6b6b; margin-top: 10px; font-size: 14px; text-align: center;"></div>
     </form>
     
-    <p class="login"> Don't have an account? <a href="signin.html">Create Account</a></p>
+    <p class="login"><span data-i18n="login-signup-link">Don't have an account?</span> <a href="signin.html" data-i18n="login-signup-link-text">Create Account</a></p>
 </div>
     </section>
-    <script type="module" src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="lang.js"></script>
+    <script src="app.js"></script>
+    <script>if (typeof setupLoginForm === 'function') setupLoginForm();</script>
 </body>
 </html>
